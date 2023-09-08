@@ -1,0 +1,266 @@
+/* Fazendo como MOBILE FIRST APPROACH */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body,
+h3 {
+  margin: 0;
+}
+
+h3 {
+  width: 100%;
+}
+
+header {
+  background-color: #29487D;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.fa-bars,
+.fa-times {
+  display: none;
+  color: #fff;
+}
+
+.menu-icon {
+  display: block;
+  height: inherit;
+  line-height: 60px;
+  z-index: 999;
+}
+
+ul {
+  list-style-type: none;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  height: inherit;
+}
+
+li {
+  margin: 0;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* MENU  */
+input {
+  display: none;
+}
+
+#toggle:checked ~ label i:nth-child(2) {
+  display: block;
+}
+
+#toggle:checked ~ label i:first-child {
+  display: none;
+}
+
+#toggle:not(checked) ~ label i:first-child {
+  display: block;
+}
+
+#toggle:not(checked) ~ label i:nth-child(2) {
+  display: none;
+}
+
+#toggle:checked ~ .menu {
+  display: block;
+}
+
+/* MAIN  */
+main {
+  padding: 25px;
+}
+main h1 {
+  color: #29487D;
+}
+
+main h5 {
+  color: #26a7de;
+}
+
+main h3 {
+  color: #d3d3d3;
+}
+
+main img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrows i {
+  color: rgba(255,255,255, 0.6);
+  font-size: 1.9rem;
+}
+
+.arrows i:hover {
+  color: rgba(255,255,255, 1);
+  cursor: pointer;
+}
+
+.fa-chevron-left {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+}
+
+.fa-chevron-right {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+}
+
+.item {
+  margin-top: 50px;
+}
+
+.description {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.categorias h5:hover {
+  color: #29487D;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background-color: #29487D;
+  color: #fff;
+}
+
+/* Media Query para maior que 768px */
+@media screen and (min-width: 768px) {
+  .nav-item {
+    font-size: 1.6rem;
+  }
+
+  header {
+    padding-right: 40px;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 20px;   
+  }
+
+  main h1, h2, h3 {
+    font-size: 1.4em;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categorias {
+    font-size: 1.8rem;  
+  }
+  
+  .toggle-checkbox {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .fa-bars {
+    display: inline-block;
+  }
+
+  ul {
+    display: flex;
+    position: static;
+    background-color: transparent;
+    justify-content: flex-end;
+    align-items: center;
+    height: auto;
+  }
+
+  li a:hover {
+    color: #26a7de;
+  }
+
+  .nav-item {
+    margin-left: 20px;
+  }
+
+  .menu {
+    position: static;
+    flex-wrap: nowrap;
+  }
+
+  .fa-times {
+    display: none;
+  }
+  
+  .carousel img {
+    max-width: 900px;
+    max-height: 300px;
+  }
+
+  .arrows i {
+    font-size: 60px;
+  }
+
+  .foto-items {
+    display: flex;
+  }
+
+  .item {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1480px) {
+  main h1, h2, h3 {
+    font-size: 1.9em;
+  }
+
+  .arrows i {
+    font-size: 60px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .arrows i:hover {
+    color: #29487D;
+  }
+}
